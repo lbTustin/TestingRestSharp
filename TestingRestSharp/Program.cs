@@ -6,6 +6,7 @@ public class Program
     public static async Task Main(string[] args)
     {
         var result = await ApiHTTPClient.PostApi();
+        var response = await result.Content.ReadAsStringAsync();
         Console.WriteLine("Hello, World!");
     }
 }
